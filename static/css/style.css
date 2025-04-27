@@ -1,0 +1,128 @@
+:root {
+  --primary-color: #2A9D8F;
+  --secondary-color: #E9C46A;
+  --background-color: #264653;
+  --text-color: #F4F4F4;
+  --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-link {
+  color: white !important;
+  margin: 0 1rem;
+  transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.book-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: var(--text-color);
+}
+
+.book-info {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.rating-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.search-container {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.search-input {
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  color: white;
+  width: 100%;
+}
+
+.search-input:focus {
+  background: rgba(255,255,255,0.15);
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.btn-search {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.btn-search:hover {
+  transform: scale(1.05);
+}
+
+.page-title {
+  text-align: center;
+  margin: 3rem 0;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .book-card {
+    margin: 1rem 0;
+  }
+
+  .book-card img {
+    height: 250px;
+  }
+}
